@@ -1,0 +1,8 @@
+<li>
+    <div class="label">quality</div>
+    <li class="btn-group">
+    {% for quality in quality_levels %}
+        <button type="button" class="btn btn-default navbar-btn watson-btn {% if set.quality.name == quality.name %}btn-success{% endif %}" data-metric="quality">{{ quality.name }}</button>
+    {% endfor %}
+    </li>
+</li>

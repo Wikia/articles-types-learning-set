@@ -1,0 +1,16 @@
+<li>
+    <div class="label">type</div>
+    {% for category, types in categories.items %}
+    <li class="watson-cat">
+        <button type="button" class="btn btn-default navbar-btn {% if set.type.category == category %}btn-success{% endif %}"
+                data-toggle="dropdown" data-target="#">
+            {{ category }} <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            {% for type in types %}
+                <li><a class="watson-btn {% if set.type.name == type %}btn-success{% endif %}" data-metric="type">{{ type }}</a></li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</li>

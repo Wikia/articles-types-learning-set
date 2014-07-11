@@ -1,0 +1,45 @@
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static "watson/css/watson.css" %}" media="screen" />
+    <script src="{% static "watson/js/watson.js" %}"></script>
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body>
+    <div class="token">
+        {% csrf_token %}
+    </div>
+    <div>
+        <div class="watson-desktop position-absolute"><iframe src="{{ url }}"></iframe></div>
+        <div class="watson-mobile width-320 float-right"><iframe src="{{ url }}?useskin=wikiamobile"></iframe></div>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-top margin-bottom-0" role="navigation">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="dropdown watson-sessions-dropdown">
+                    <a class="watson-sessions dropdown-toggle navbar-brand" data-toggle="dropdown" data-target="#">
+                        {{ state.session }}
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav blue-background padding-right-5 watson-metric">
+                {% include "metrics/types.html" %}
+            </ul>
+            <ul class="nav navbar-nav yellow-background padding-right-5 watson-metric">
+                {% include "metrics/quality.html" %}
+            </ul>
+            <ul class="nav navbar-nav salmon-background padding-right-5 watson-metric">
+                {% include "metrics/kinds.html" %}
+            </ul>
+            <li class="nav navbar-nav divider"/>
+            <li class="nav navbar-nav">
+                <button type="button" class="btn btn-primary navbar-btn watson-next">Next</button>
+            </li>
+            <ul class="nav navbar-nav yellow-background padding-right-5 watson-metric navbar-right">
+                {% include "metrics/mobile_quality.html" %}
+            </ul>
+        </div>
+    </nav>
+</body>

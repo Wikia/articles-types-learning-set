@@ -1,0 +1,17 @@
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "watson/css/watson.css" %}" media="screen" />
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container-fluid">
+        <form action="" method="post" class="navbar-form navbar-left hide-labels">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+            <input type="submit" class="btn btn-primary navbar-btn" value="Login"/>
+            {% endbuttons %}
+        </form>
+    </div>
+</nav>

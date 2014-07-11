@@ -1,0 +1,10 @@
+<li>
+    <div class="label">mobile quality</div>
+    <li class="btn-group">
+    {% for mobile_quality in mobile_quality_levels %}
+        <button type="button"
+                class="btn btn-default navbar-btn watson-btn {% if set.mobile_quality.name == mobile_quality.name %}btn-success{% endif %}"
+                data-metric="mobile_quality">{{ mobile_quality.name }}</button>
+    {% endfor %}
+    </li>
+</li>

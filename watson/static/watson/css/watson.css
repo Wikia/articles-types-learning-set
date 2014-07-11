@@ -1,0 +1,55 @@
+.hide-labels label {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+.blue-background {
+    background-color: #5BC0DE;
+}
+
+.yellow-background {
+    background-color: #FFD063;
+}
+
+.salmon-background {
+    background-color: #FF7963;
+}
+
+.nav.divider {
+    height: 40px;
+    margin: 0 9px;
+    border-left: 1px solid #f2f2f2;
+    border-right: 1px solid #ffffff;
+}
+
+.padding-right-5 {
+    padding-right: 5px;
+}
+
+.width-320 {
+    width: 320px;
+}
+
+.float-right {
+    float: right;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}

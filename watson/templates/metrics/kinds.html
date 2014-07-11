@@ -1,0 +1,8 @@
+<li>
+    <div class="label">kind</div>
+    <li class="btn-group">
+    {% for kind in kinds %}
+        <button type="button" class="btn btn-default navbar-btn watson-btn {% if set.kind.name == kind.name %}btn-success{% endif %}" data-metric="kind">{{ kind.name }}</button>
+    {% endfor %}
+    </li>
+</li>
